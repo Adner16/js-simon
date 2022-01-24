@@ -2,7 +2,6 @@ console.log('js ok');
 
 
 const numbers = [];
-const userNum = [];
 
 
 for(i=0; i < 5; i++){
@@ -14,18 +13,21 @@ alert(numbers);
 
 setTimeout(question, 3000);
 
+
 function question() {
-   userNum =  prompt('inserisci i numeri:');}
+    const correctNum = [];
+    let userNum;
+    for( i = 0; i <5; i++){
+      userNum =  prompt('inserisci i numeri:');
 
     if(userNum == numbers[i]){
         correctNum.push(userNum);
     }
 
+    }
+    alert(`hai indovinato ${correctNum} numeri:${correctNum.length}`);
+
+}    
 
 
-const correctNum = [];
-const correctAns = [];
-
-
-alert(`ha indovinato numeri:${userNum}`);
 
