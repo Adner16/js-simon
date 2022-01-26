@@ -17,17 +17,16 @@ setTimeout(question, 3000);
 function question() {
     const correctNum = [];
     let userNum;
-    for( i = 0; i <5; i++){
+    do {
       userNum =  parseInt(prompt('inserisci i numeri:'));
     if(userChoise.includes(userNum)){
         alert('hai gia inserito questo numero');
-    } else{
+    } else {
         userChoise.push(userNum);
     }    
     if(numbers.includes(userNum)){
         correctNum.push(userNum)
-    }
-    }
+    } while (numbers.length < 5);
 
     alert(`hai indovinato ${correctNum} numeri:${correctNum.length}`);
 }    
