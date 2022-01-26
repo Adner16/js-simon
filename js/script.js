@@ -18,15 +18,16 @@ function question() {
     const correctNum = [];
     let userNum;
     do {
-      userNum =  parseInt(prompt('inserisci i numeri:'));
-    if(userChoise.includes(userNum)){
-        alert('hai gia inserito questo numero');
-    } else {
-        userChoise.push(userNum);
-    }    
-    if(numbers.includes(userNum)){
-        correctNum.push(userNum)
-    } while (numbers.length < 5);
+        userNum =  parseInt(prompt('inserisci i numeri:'));
+        if(userChoise.includes(userNum)){
+            alert('hai gia inserito questo numero');
+        } else {
+            userChoise.push(userNum);
+        }    
+        if(numbers.includes(userNum)){
+            correctNum.push(userNum)
+        }    
+    } while (userChoise.length < 5);
 
     alert(`hai indovinato ${correctNum} numeri:${correctNum.length}`);
 }    
